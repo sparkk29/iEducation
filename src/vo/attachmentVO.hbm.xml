@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="vo.AttachmentVO" table="lsc_attachment_mst" lazy="false">
+  
+   <id name="attachmentID" type="int" column="attachmentID" ><generator class="increment"/> </id>
+ 
+   
+   <property name="attachmentType"><column name="attachmentType" /></property>
+   <property name="materialType"><column name="materialType" /></property>
+   
+   <many-to-one name="courseID" column="courseID" class="vo.CourseVO"/>
+  <many-to-one name="branchID" column="branchID" class="vo.BranchVO"/>
+  <many-to-one name="semesterID" column="semesterID" class="vo.SemesterVO"/>
+  <many-to-one name="subjectID" column="subjectID" class="vo.SubjectVO"/>   
+   
+ </class>
+</hibernate-mapping>

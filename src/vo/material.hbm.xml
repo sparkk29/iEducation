@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="vo.Material" table="material">
+   <id name="materialID" type="long" column="materialID">
+   <generator class="increment"/>
+  </id>
+
+  <property name="contentName">
+   <column name="contentName"/>
+  </property>
+  
+  <property name="materialType">
+   <column name="materialType"/>
+  </property>
+
+  <many-to-one name="course" column="courseID" class="vo.Course"/>
+  <many-to-one name="branch" column="branchID" class="vo.Branch"/>
+  <many-to-one name="semester" column="semesterID" class="vo.Semester"/>
+  <many-to-one name="subject" column="subjectID" class="vo.Subject"/>
+ 
+ </class>
+</hibernate-mapping>

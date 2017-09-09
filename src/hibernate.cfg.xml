@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">
+
+			com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">
+
+			jdbc:mysql://localhost/paperless_university</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password"></property>
+		<property name="hibernate.connection.pool_size">10</property>
+		<property name="show_sql">true</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- Mapping files -->
+		<!-- ADMIN -->
+		<mapping resource="vo/country.hbm.xml"/>
+		<mapping resource="vo/state.hbm.xml"/>
+		<mapping resource="vo/city.hbm.xml"/>
+		
+		<mapping resource="vo/course.hbm.xml"/>
+		<mapping resource="vo/branch.hbm.xml"/>
+		<mapping resource="vo/semester.hbm.xml"/>
+		<mapping resource="vo/subject.hbm.xml"/>
+		
+		<mapping resource="vo/manageExam.hbm.xml"/>		
+			
+		<mapping resource="vo/register.hbm.xml"/>
+		<mapping resource="vo/userType.hbm.xml"/>
+		<mapping resource="vo/faq.hbm.xml"/>
+		
+		
+		<!-- FACULTY -->
+		<mapping resource="vo/studentRegister.hbm.xml"/>
+		<mapping resource="vo/questionpaper.hbm.xml"/>
+		<mapping resource="vo/attachmentVO.hbm.xml"/>
+        <mapping resource="vo/attachmentMappingVO.hbm.xml"/>
+   
+		<mapping resource="vo/complain.hbm.xml"/>
+		<mapping resource="vo/applyExam.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

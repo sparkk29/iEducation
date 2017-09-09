@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="vo.StudentRegisterVO" table="studentRegister">
+   <id name="studentRegisterID" type="long" column="studentRegisterID">
+   <generator class="increment"/>
+  </id>
+
+  <property name="firstName">
+   <column name="firstName"/>
+  </property>
+  
+  <property name="lastName">
+   <column name="lastName"/>
+  </property>
+  
+  <property name="address">
+   <column name="address"/>
+  </property>
+  
+  <property name="phoneNo">
+   <column name="phoneNo"/>
+  </property>
+  
+  <property name="emailID">
+   <column name="emailID"/>
+  </property>
+  
+  <property name="gender">
+   <column name="gender"/>
+  </property>
+  
+  <property name="dob">
+   <column name="dob"/>
+  </property>
+
+<property name="username">
+   <column name="username"/>
+  </property>
+
+<property name="password">
+   <column name="password"/>
+  </property>
+
+
+  <many-to-one name="countryID" column="countryID" class="vo.CountryVO"/>
+  <many-to-one name="stateID" column="stateID" class="vo.StateVO"/>
+  <many-to-one name="cityID" column="cityID" class="vo.CityVO"/>
+  <many-to-one name="courseID" column="courseID" class="vo.CourseVO"/>
+<many-to-one name="branchID" column="branchID" class="vo.BranchVO"/>  
+ <many-to-one name="semesterID" column="semesterID" class="vo.SemesterVO"/>
+ 
+ </class>
+</hibernate-mapping>

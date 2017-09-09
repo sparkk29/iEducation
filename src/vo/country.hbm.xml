@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="vo.CountryVO" table="country" lazy="false">
+   <id name="countryID" type="long" column="countryID">
+   <generator class="increment"/>
+  </id>
+
+  <property name="countryName">
+   <column name="countryName"/>
+  </property>
+  
+ 
+ </class>
+</hibernate-mapping>

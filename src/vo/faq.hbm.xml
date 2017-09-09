@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="vo.FaqVO" table="faq">
+   <id name="faqID" type="long" column="faqID">
+   <generator class="increment"/>
+  </id>
+
+  <property name="faqQuestion">
+  	<column name="faqQuestion"/>
+  </property>
+  
+  <property name="faqAnswer">
+ 	 <column name="faqAnswer"/>
+  </property>
+  
+   
+ </class>
+</hibernate-mapping>

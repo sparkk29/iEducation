@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="vo.ApplyExamVO" table="applyExam">
+   <id name="applyExamID" type="long" column="applyExamID">
+   <generator class="increment"/>
+  </id>
+
+  <property name="result">
+   <column name="result"/>
+  </property>
+  
+  
+ 
+ <many-to-one name="examID" column="examID" class="vo.ManageExamVO"/>
+ <many-to-one name="userID" column="userID" class="vo.UserTypeVO"/>
+ </class>
+ </hibernate-mapping>
